@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>lava jato 306 norte</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="/img/logotipo.png">
+        <nav>
+            <ul>
+                <li ref="#">Serviços</li>
+                <li>Fale Conosco</li>
+                <li>Nossos Clientes</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="list">
+            <div class="item active">
+                <div class="car-img">
+                    <img src="/img/CERA.png" alt="imagem carro">
+                </div>
+                <div class="content">
+                    <p class="tipo-lavagem">
+                        Lavagem com cera
+                    </p>
+                    <h2>Brilho e proteção garantida </h2>
+                    <p class="descricao">
+                        Lorem ipsum dolor sit amet consectetur adip
+                    </p>
+                    <button class="information">saiba mais</button>
+
+                </div>
+            </div>
+            <div>
+                <section id="contatos" class="contatos">
+                    <h2 class="contatos-titulo">Entre em Contato</h2>
+                    <form class="formulario-contato" id="formulario" onsubmit="enviarwhats(event)">
+                        <div class="grupo-form">
+                            <input placeholder="Nome" class="campo-form" id="nome">
+                        </div>
+                        <div class="grupo-form">
+                            <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6"
+                                id="mensagem"></textarea>
+                        </div>
+                        <button type="submit" class="botao-form">Enviar WhatsApp</button>
+                    </form>
+                </section>
+            </div>
+
+            <div class="item">
+                <div class="car-img">
+                    <img src="/img/carro2.png" alt=" carro">
+                </div>
+                <div class="content">
+                    <p class="tipo-lavagem">
+                        Ducha flash
+                    </p>
+                    <h2>Economize tempo e deixe seu carro sempre limpo </h2>
+                    <p class="descricao">
+                        Lorem ipsum dolor sit amet consectetur adip
+                    </p>
+                    <button class="information">saiba mais</button>
+                </div>
+            </div>
+
+
+            <div class="item ">
+                <div class="car-img">
+                    <img src="/img/carro3.png" alt="imagem ">
+                </div>
+                <div class="content">
+                    <p class="tipo-lavagem">Lavagem Americana</p>
+                    <h2>rapidez e eficiencia com o auto brilho</h2>
+                    <p class="descricao">
+                        Lorem ipsum dolor sit amet consectetur adip
+                    </p>
+                    <button class="information">saiba mais</button>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="seta">
+            <button id="prev"><img src="/img/arrow.png" alt="seta"></button>
+            <button id="next"><img src="/img/arrow.png" alt="seta"></button>
+
+        </div>
+
+        <div class="indicators">
+            <div class="number">01</div>
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+
+        </div>
+        </div>
+    </section>
+    <script>    function enviarwhats(event) {
+            event.preventDefault()
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem');
+            const telefone = '5561981254304'
+
+            const texto = `Olá! me chamo ${nome} ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+            const url = `http://wa.me/${telefone}/?text=${msgFormatada}`
+
+            window.open(url, '_blank')
+        }</script>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
